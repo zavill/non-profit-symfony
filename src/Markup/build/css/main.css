@@ -1,0 +1,147 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  color: #FFFFFF;
+  /*transition: 150ms ease-in-out,  transform 150ms ease;*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: unset; }
+
+a:hover {
+  color: #710000; }
+
+#__main {
+  background: #FFFBF5; }
+
+.center {
+  max-width: 1140px;
+  padding: 0 12px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box; }
+
+.container {
+  max-width: 1140px; }
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+
+.col {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+.col h1 {
+  text-align: center !important; }
+
+/* Хидер/футер */
+footer {
+  padding-top: 43px;
+  padding-bottom: 21px;
+  background: #F59600; }
+
+.footer__item p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px; }
+
+header {
+  background-color: #F59600; }
+
+.header__inner {
+  background-color: #F59600;
+  max-width: 1140px;
+  padding: 0 12px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box; }
+
+.header__content {
+  padding: 5px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 57px; }
+  .header__menu__item {
+    font-size: 18px;
+    padding: 15px 0;
+    margin-left: 30px;
+    position: relative;
+    display: flex;
+    align-items: center; }
+
+/* Компоненты */
+.main-block {
+  background-image: url("https://www.gracelutheranlexington.org/wp-content/uploads/2018/01/cropped-IMG_20180131_145555-7.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 160px 0; }
+
+.pastor-block {
+  padding-top: 120px;
+  padding-bottom: 320px;
+  background: #FFFBF5;
+  position: relative; }
+  .pastor-block__row {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px; }
+  .pastor-block__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; }
+    .pastor-block__item__wrap h3 {
+      font-size: 50px;
+      font-family: "Philosopher", sans-serif;
+      color: #001D38;
+      line-height: 60px;
+      margin-bottom: 0; }
+    .pastor-block__item__wrap p, .pastor-block__item li {
+      margin-top: 30px;
+      font-size: 16px;
+      line-height: 28px;
+      color: #596672; }
+    .pastor-block__item__wrap li {
+      margin-top: 3px !important;
+      margin-bottom: 0 !important; }
+    .pastor-block__item__wrap ul {
+      margin-left: 25px; }
+    .pastor-block__item__wrap img {
+      padding-left: 80px; }
+/*# sourceMappingURL=main.css.map */

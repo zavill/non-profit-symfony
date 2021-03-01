@@ -1,0 +1,14 @@
+footer {
+  padding-top: 43px;
+  padding-bottom: 21px;
+  background: #F59600;
+}
+
+.footer {
+  &__item p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+}
+

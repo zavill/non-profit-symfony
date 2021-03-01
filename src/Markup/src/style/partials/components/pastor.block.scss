@@ -1,0 +1,55 @@
+.pastor-block {
+  padding-top: 120px;
+  padding-bottom: 320px;
+  background: #FFFBF5;
+  position: relative;
+
+  &__row {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  &__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+
+    &__wrap h3 {
+      font-size: 50px;
+      font-family: "Philosopher", sans-serif;
+      color: #001D38;
+      line-height: 60px;
+      margin-bottom: 0;
+    }
+
+    &__wrap p, li {
+      margin-top: 30px;
+      font-size: 16px;
+      line-height: 28px;
+      color: #596672;
+    }
+
+    &__wrap li {
+      margin-top: 3px !important;
+      margin-bottom: 0 !important;
+    }
+
+    &__wrap ul {
+      margin-left: 25px;
+    }
+
+    &__wrap img {
+      padding-left: 80px;
+    }
+
+  }
+}
