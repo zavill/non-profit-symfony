@@ -1,0 +1,15 @@
+.banner-block {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 160px 0;
+
+  &__about-us {
+    background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/44/81/kwHm5q.jpg");
+  }
+
+  &__prayer {
+    background-image: url("https://threshold-church.com/wp-content/uploads/Threshold-Prayer.jpg");
+  }
+}
