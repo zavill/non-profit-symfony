@@ -1,0 +1,52 @@
+.prayer-block {
+  padding: 130px 0 100px;
+
+  &__field {
+    &__header{
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__submit-button {
+    margin-top: 30px;
+    background: #fff;
+    color: #F59600;
+    display: inline-block;
+    padding: 18px 44px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #F59600;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &__submit-button:hover {
+    background: #F59600;
+    color: #fff !important;
+    border: 1px solid #F59600;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 0;
+    color: black;
+  }
+
+  p {
+    font-size: 16px;
+    color: black;
+  }
+
+  textarea {
+    border: 1px solid #e5e6e9;
+    border-radius: 0;
+    padding-left: 18px;
+    padding-top: 5px;
+    font-size: 13px;
+  }
+}

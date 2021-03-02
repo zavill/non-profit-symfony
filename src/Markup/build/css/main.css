@@ -46,6 +46,9 @@ a:hover {
 .col h1 {
   text-align: center !important; }
 
+.bold {
+  font-weight: 700; }
+
 /* Хидер/футер */
 footer {
   padding-top: 43px;
@@ -144,4 +147,71 @@ header {
       margin-left: 25px; }
     .pastor-block__item__wrap img {
       padding-left: 80px; }
+
+.banner-block {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 160px 0; }
+  .banner-block__about-us {
+    background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/44/81/kwHm5q.jpg"); }
+  .banner-block__prayer {
+    background-image: url("https://threshold-church.com/wp-content/uploads/Threshold-Prayer.jpg"); }
+
+.text-block {
+  padding-top: 145px;
+  padding-bottom: 130px; }
+
+.text-block h3 {
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 0;
+  color: black; }
+
+.text-block p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 46px;
+  margin-top: 24px;
+  color: black; }
+
+.prayer-block {
+  padding: 130px 0 100px; }
+  .prayer-block__field__header {
+    margin-top: 5px;
+    margin-bottom: 15px; }
+  .prayer-block__submit-button {
+    margin-top: 30px;
+    background: #fff;
+    color: #F59600;
+    display: inline-block;
+    padding: 18px 44px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #F59600;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s; }
+  .prayer-block__submit-button:hover {
+    background: #F59600;
+    color: #fff !important;
+    border: 1px solid #F59600; }
+  .prayer-block h3 {
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 0;
+    color: black; }
+  .prayer-block p {
+    font-size: 16px;
+    color: black; }
+  .prayer-block textarea {
+    border: 1px solid #e5e6e9;
+    border-radius: 0;
+    padding-left: 18px;
+    padding-top: 5px;
+    font-size: 13px; }
 /*# sourceMappingURL=main.css.map */
