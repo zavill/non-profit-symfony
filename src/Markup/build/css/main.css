@@ -101,7 +101,7 @@ header {
 
 /* Компоненты */
 .main-block {
-  background-image: url("https://www.gracelutheranlexington.org/wp-content/uploads/2018/01/cropped-IMG_20180131_145555-7.jpg");
+  background-image: url("../img/main.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -155,9 +155,9 @@ header {
   position: relative;
   padding: 160px 0; }
   .banner-block__about-us {
-    background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/44/81/kwHm5q.jpg"); }
+    background-image: url("../img/about.jpg"); }
   .banner-block__prayer {
-    background-image: url("https://threshold-church.com/wp-content/uploads/Threshold-Prayer.jpg"); }
+    background-image: url("../img/prayer.jpg"); }
 
 .text-block {
   padding-top: 145px;
