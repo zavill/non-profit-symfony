@@ -15,5 +15,5 @@
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
 
-/src/Markup/node_modules
-/src/Markup/package-lock.json
+/public/Markup/node_modules
+/public/Markup/package-lock.json
