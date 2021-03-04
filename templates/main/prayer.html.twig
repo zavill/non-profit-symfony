@@ -1,8 +1,34 @@
 {% extends 'main/base.html.twig' %}
 {% block body %}
 
-    <h1>
-        {{ title }}
-    </h1>
+    <div class="banner-block banner-block__prayer">
+        <div class="container center">
+            <div class="row">
+                <div class="col">
+                    <h1>Prayer Request</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="prayer-block">
+        <div class="container center">
+            <div class="row">
+                <div class="col">
+                    <h3>Prayer Request</h3>
+                    <p class="bold prayer-block__field__header">Who are we praying for? </p>
+                    <p>First Name</p>
+                    <textarea style="width: 186px; height: 33px;" placeholder="First Name"></textarea>
+                    <p>Last Name</p>
+                    <textarea style="width: 186px; height: 33px;" placeholder="Last Name"></textarea>
+                    <p class="bold prayer-block__field__header">What is the nature of the prayer request?</p>
+                    <textarea style="width: 308px; height: 65px;" placeholder="Enter Message"></textarea>
+                </div>
+                <div class="col">
+                    <button class="prayer-block__submit-button">Submit</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
