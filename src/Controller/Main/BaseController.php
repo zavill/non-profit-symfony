@@ -11,7 +11,8 @@ class BaseController extends AbstractController
     public function renderDefault(): array
     {
         return [
-            'title' => 'Non-Profit Organization'
+            'title' => 'Non-Profit Organization',
+            'markup_path' => '/public/Markup/build',
         ];
     }
 }

@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+    {% block stylesheets %}
+        {# {{ encore_entry_link_tags('app') }} #}
+        <link rel="stylesheet" type="text/css" href="{{ markup_path }}/css/main.css">
+    {% endblock %}
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    {% block javascripts %}
+        {# {{ encore_entry_script_tags('app') }} #}
+    {% endblock %}
+</head>
+<body>
+<header>
+    <div class="header__inner">
+        <div class="header__content">
+            <h1 class="header__logo">New Mount Sinai Baptist Church</h1>
+            <div class="header__menu">
+                <a class="header__menu__item">HOME</a>
+                <a class="header__menu__item">ABOUT US</a>
+                <a class="header__menu__item">DONATE</a>
+                <a class="header__menu__item">PRAYER REQUEST</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="__main">
+    {% block body %}{% endblock %}
+</div>
+<footer>
+    <div class="container center">
+        <div class="row">
+            <div class="footer__item">
+                <h2>New Mount Sinai Baptist Church</h2>
+                <p>
+                    310 North Larime Avenue
+                    <br>
+                    Chicago, IL, 60644
+                    <br>
+                    +1 (321) 754-6583
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
 </html>
