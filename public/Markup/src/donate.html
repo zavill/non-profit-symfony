@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="./js/scripts.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="header__inner">
+        <div class="header__content">
+            <h1 class="header__logo">New Mount Sinai Baptist Church</h1>
+            <div class="header__menu">
+                <a class="header__menu__item">HOME</a>
+                <a class="header__menu__item">ABOUT US</a>
+                <a class="header__menu__item">DONATE</a>
+                <a class="header__menu__item">PRAYER REQUEST</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="__main">
+    <div class="container center">
+        <div class="stripe-container">
+            <form class="stripe-form" id="payment-form">
+                <div id="card-element"><!--Stripe.js injects the Card Element--></div>
+                <button class="stripe-button" id="submit">
+                    <div class="spinner hidden" id="spinner"></div>
+                    <span id="button-text">Donate</span>
+                </button>
+                <p id="card-error" role="alert"></p>
+                <p class="result-message hidden">
+                    Payment succeeded, see the result in your
+                    <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to pay again.
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container center">
+        <div class="row">
+            <div class="footer__item">
+                <h2>New Mount Sinai Baptist Church</h2>
+                <p>
+                    310 North Larime Avenue
+                    <br>
+                    Chicago, IL, 60644
+                    <br>
+                    +1 (321) 754-6583
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
