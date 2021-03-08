@@ -1,7 +1,7 @@
 /* Variables */
 /* Buttons and links */
 /* spinner/processing state, errors */
-@-webkit-keyframes "loading" {
+@-webkit-keyframes loading {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -11,7 +11,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes "loading" {
+@keyframes loading {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
