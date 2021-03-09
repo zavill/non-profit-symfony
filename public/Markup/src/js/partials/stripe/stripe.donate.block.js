@@ -16,7 +16,7 @@ var purchase = {
 
 document.querySelector("button").disabled = true;
 
-fetch("/create.php", {
+fetch(baseURL + "/donate/create/", {
 
     method: "POST",
 
