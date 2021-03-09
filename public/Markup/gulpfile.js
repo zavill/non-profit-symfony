@@ -6,6 +6,8 @@ const browserSync = require('browser-sync');
 const changed = require('gulp-changed');
 const nunjucksRender = require('gulp-nunjucks-render');
 const include = require('gulp-include');
+const uglify = require('gulp-uglify');
+var pipeline = require('readable-stream').pipeline;
 
 
 let envDev = true;
@@ -56,6 +58,13 @@ gulp.task('style:build', function (cb) {
         .pipe(gulp.dest(path.build.css, {sourcemaps: '.'}))
 });
 
+gulp.task('style:build:prod', function (cb) {
+    return gulp.src(path.src.style, {sourcemaps: envDev})
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(gulpif(!envDev, autoprefixer(['> 5% in RU', 'IE >= 10', 'Firefox >= 12', 'Opera >= 12.11'])))
+        .pipe(gulp.dest(path.build.css, {sourcemaps: '.'}))
+});
+
 gulp.task('img:build', function (cb) {
     return gulp.src(path.src.img)
         .pipe(changed(path.build.img))
@@ -75,6 +84,12 @@ gulp.task('js:build', function (cb) {
         .pipe(gulp.dest(path.build.js));
 });
 
+gulp.task('js:build:prod', function (cb) {
+    return gulp.src('./src/js/**/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest(path.build.js))
+});
+
 gulp.task('html:build', function (cb) {
     return gulp.src(path.src.html)
         .pipe(include())
@@ -92,4 +107,5 @@ gulp.task('watch', function (cb) {
 });
 
 gulp.task('build', gulp.series('style:build', 'html:build', 'img:build', 'libs:build', 'js:build'));
+gulp.task('prod', gulp.series('style:build:prod', 'html:build', 'img:build', 'libs:build', 'js:build:prod'));
 gulp.task('default', gulp.series('build', 'watch'));
