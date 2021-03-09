@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ markup_path }}/css/main.css">
     {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
     {% block stylesheets %}
         {# {{ encore_entry_link_tags('app') }} #}
-        <link rel="stylesheet" type="text/css" href="{{ markup_path }}/css/main.css">
     {% endblock %}
 
     {% block javascripts %}
         {# {{ encore_entry_script_tags('app') }} #}
     {% endblock %}
+    <script src="{{ markup_path }}/js/scripts.js" defer></script>
 </head>
 <body>
 <header>
