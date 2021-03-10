@@ -11,7 +11,7 @@ class BaseController extends AbstractController
     public function renderDefault(): array
     {
         return [
-            'title' => 'Non-Profit Organization',
+            'title' => 'New Mount Sinai Baptist Church',
             'markup_path' => '/public/Markup/build',
         ];
     }
