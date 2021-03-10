@@ -1,4 +1,8 @@
-var baseURL = "http://localhost";
+
+/* Production */
+var baseURL = "http://nmsbc.ga";
+/* Develop */
+//var baseURL = "http://localhost";
 
 // A reference to Stripe.js initialized with a fake API key.
 
