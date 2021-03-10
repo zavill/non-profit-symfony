@@ -1,6 +1,6 @@
 
 /* Production */
-var baseURL = "http://nmsbc.ga";
+const baseURL = "http://nmsbc.ga";
 /* Develop */
 //var baseURL = "http://localhost";
 
