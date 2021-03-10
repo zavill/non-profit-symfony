@@ -179,6 +179,9 @@ header {
   .prayer-block__field__header {
     margin-top: 5px;
     margin-bottom: 15px; }
+  .prayer-block__textarea__header {
+    font-size: 16px;
+    color: black; }
   .prayer-block__submit-button {
     margin-top: 30px;
     background: #fff;

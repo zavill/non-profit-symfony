@@ -2,6 +2,8 @@
 
 namespace App\Controller\Main;
 
+use App\Entity\Praying;
+use App\Form\PrayingType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -31,18 +33,6 @@ class HomeController extends BaseController
         $arRender = parent::renderDefault();
 
         return $this->render('main/about.html.twig', $arRender);
-    }
-
-    /**
-     * @Route("/prayer/", name="prayer")
-     *
-     * @return Response
-     */
-    public function prayer(): Response
-    {
-        $arRender = parent::renderDefault();
-
-        return $this->render('main/prayer.html.twig', $arRender);
     }
 
 }
