@@ -2,13 +2,14 @@
 
 namespace App\Controller\Security;
 
+use App\Controller\Main\BaseController;
 use LogicException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
-class SecurityController extends AbstractController
+class SecurityController extends BaseController
 {
     /**
      * @Route("/login", name="app_login")
@@ -26,7 +27,9 @@ class SecurityController extends AbstractController
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+        $arRender = parent::renderDefault();
+
+        return $this->render('security/login.html.twig', array_merge(['last_username' => $lastUsername, 'error' => $error], $arRender));
     }
 
     /**
