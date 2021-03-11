@@ -5,4 +5,13 @@
         {{ title }}
     </h1>
 
+    <h3>Praying Requests</h3>
+    {% if praying is defined %}
+        <ul>
+            {% for pray in praying %}
+                <li>{{ pray.firstName }} {{ pray.lastName }} {{ pray.description }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
 {% endblock %}

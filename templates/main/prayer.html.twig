@@ -13,20 +13,24 @@
     <div class="prayer-block">
         <div class="container center">
             <div class="row">
+                {{ form_start(form, {'method': 'POST'}) }}
                 <div class="col">
                     <h3>Prayer Request</h3>
+                    {% if result is defined %}
+                        <p class="bold prayer-block__field__header">{{ result }}</p>
+                    {% endif %}
                     <p class="bold prayer-block__field__header">Who are we praying for? </p>
-                    <p>First Name</p>
-                    <textarea style="width: 186px; height: 33px;" placeholder="First Name"></textarea>
-                    <p>Last Name</p>
-                    <textarea style="width: 186px; height: 33px;" placeholder="Last Name"></textarea>
+                    <p>{{ form_label(form.FirstName, null, {'label_attr': {'class': 'prayer-block__textarea__header'}}) }}</p>
+                    {{ form_widget(form.FirstName, {'attr': {'style': 'width: 186px; height: 33px;', 'placeholder':'First Name'}}) }}
+                    <p>{{ form_label(form.LastName, null, {'label_attr': {'class': 'prayer-block__textarea__header'}}) }}</p>
+                    {{ form_widget(form.LastName, {'attr': {'style': 'width: 186px; height: 33px;', 'placeholder':'Last Name'}}) }}
                     <p class="bold prayer-block__field__header">What is the nature of the prayer request?</p>
-                    <textarea style="width: 308px; height: 65px;" placeholder="Enter Message"></textarea>
+                    {{ form_widget(form.Description, {'attr': {'style': 'width: 308px; height: 65px;', 'placeholder':'Enter Message'}}) }}
                 </div>
                 <div class="col">
-                    <button class="prayer-block__submit-button">Submit</button>
-
+                    {{ form_widget(form.Submit, {'attr': {'class': 'prayer-block__submit-button'}}) }}
                 </div>
+                {{ form_end(form) }}
             </div>
         </div>
     </div>

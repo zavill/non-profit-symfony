@@ -11,7 +11,7 @@ class AdminBaseController extends AbstractController
     public function renderDefault(): array
     {
         return [
-            'title' => 'Non-Profit Organization Admin Panel'
+            'title' => 'New Mount Sinai Baptist Church Admin Panel'
         ];
     }
 }

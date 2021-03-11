@@ -6,6 +6,7 @@ namespace App\Controller\Main;
 use Error;
 use Stripe\Exception\ApiErrorException;
 use Stripe\Stripe;
+use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -22,6 +23,8 @@ class DonateController extends BaseController
     {
         $arRender = parent::renderDefault();
 
+        //$arRender['stripe_key'] = $_ENV['STRIPE_KEY'];
+
         return $this->render('main/donate.html.twig', $arRender);
     }
 
@@ -30,7 +33,7 @@ class DonateController extends BaseController
      */
     public function createPaymentIntent(): JsonResponse
     {
-        Stripe::setApiKey('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
+        Stripe::setApiKey($_ENV['STRIPE_KEY']);
 
         header('Content-Type: application/json');
 
