@@ -3,6 +3,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Praying;
 use Symfony\Component\Routing\Annotation\Route;
 
 class AdminHomeController extends AdminBaseController
@@ -15,6 +16,18 @@ class AdminHomeController extends AdminBaseController
     {
         $arRender = parent::renderDefault();
 
+        $arRender['praying'] = $this->getPrayersAction();
+
         return $this->render('admin/index.html.twig', $arRender);
+    }
+
+    /**
+     * Получение всех запросов на молитвы
+     *
+     * @return Praying[]|object[]
+     */
+    public function getPrayersAction(): array
+    {
+        return $this->getDoctrine()->getRepository(Praying::class)->findBy([], ['id' => 'DESC']);
     }
 }
