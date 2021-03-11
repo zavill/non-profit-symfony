@@ -16,6 +16,7 @@
                 {{ form_start(form, {'method': 'POST'}) }}
                 <div class="col">
                     <h3>Prayer Request</h3>
+                    <p class="bold prayer-block__field__header">{{ result }}</p>
                     <p class="bold prayer-block__field__header">Who are we praying for? </p>
                     <p>{{ form_label(form.FirstName, null, {'label_attr': {'class': 'prayer-block__textarea__header'}}) }}</p>
                     {{ form_widget(form.FirstName, {'attr': {'style': 'width: 186px; height: 33px;', 'placeholder':'First Name'}}) }}
