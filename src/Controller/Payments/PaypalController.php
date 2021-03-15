@@ -15,11 +15,17 @@ use PayPalCheckoutSdk\Orders\OrdersCreateRequest;
 class PaypalController
 {
     /**
-     * @Route("/donate/create/paypal", methods={"POST"})
-     *
+     ** @Route("/donate/create/paypal", methods={"POST"})
+     */
+    public function index(): JsonResponse
+    {
+        return $this->createPaymentIntentAction();
+    }
+
+    /**
      * @return JsonResponse
      */
-    public function createPaymentIntent(): JsonResponse
+    public function createPaymentIntentAction(): JsonResponse
     {
         $environment = new SandboxEnvironment($_ENV['PAYPAL_CLIENT'], $_ENV['PAYPAL_SECRET']);
         $client = new PayPalHttpClient($environment);

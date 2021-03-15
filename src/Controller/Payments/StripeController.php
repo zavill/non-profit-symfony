@@ -16,7 +16,15 @@ class StripeController
     /**
      * @Route("/donate/create/stripe", methods={"POST"})
      */
-    public function createPaymentIntent(): JsonResponse
+    public function index(): JsonResponse
+    {
+        return $this->createPaymentIntentAction();
+    }
+
+    /**
+     * @return JsonResponse
+     */
+    public function createPaymentIntentAction(): JsonResponse
     {
         Stripe::setApiKey($_ENV['STRIPE_KEY']);
 
@@ -25,7 +33,6 @@ class StripeController
         try {
             // retrieve JSON from POST body
             $json_str = file_get_contents('php://input');
-            $json_obj = json_decode($json_str);
             $paymentIntent = \Stripe\PaymentIntent::create(
                 [
                     'amount' => 1400,
