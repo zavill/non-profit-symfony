@@ -22,7 +22,7 @@ var purchase = {
 
 document.querySelector("button").disabled = true;
 
-fetch(baseURL + "/donate/create/", {
+fetch(baseURL + "/donate/create/stripe", {
 
     method: "POST",
 
